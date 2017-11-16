@@ -1,0 +1,20 @@
+<aiml version="2.0">
+
+<!-- This category works with the Standard AIML Set -->
+<category>
+<pattern>LOAD AIML ENGLISH</pattern>
+<template>
+
+<!-- Load standard AIML set -->
+<learn>/home/pi/ros_catkin_ws/src/spike/assets/aiml/encommandes.aiml</learn>
+</template>
+</category>
+
+<category>
+<pattern>TEST</pattern>
+<template>
+OK JSD.
+</template>
+</category>
+
+</aiml>

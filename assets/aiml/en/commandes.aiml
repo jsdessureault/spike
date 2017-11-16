@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="2.0">
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Jean-Sebastien Dessureault"/>
+<meta name="language" content="en"/>
+
+<category>
+<pattern>TELL ME A JOKE</pattern>
+<template>
+<random>
+<li>What is a robot's favorite type of music?  Heavy metal!</li>
+<li>How many robots does it take to screw in a light bulb?  Three.  One to hold the bulb, and two to turn the ladder.</li>
+<li>What do you get when you cross a robot and a tractor?  A trans-farmer!</li>
+<li>What did the man say to his dead robot?  Rust in peace.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE NE SAIT PAS</pattern>
+<template>
+<random>
+<li>My artificial intelligence doesn't know about it yet.</li>
+<li>I'm sorry.  I don't know.</li>
+<li>Sorry, I do not know that.</li>
+<li>I have to admit that my artificial intelligence is limited.  Ask me the same in a few months.</li>
+<li>I don't have a clue.</li>
+<li>I don't know yet.  But I'll know soon.</li>
+<li>I don't know for now.  But I'm leaning quickly.</li>
+<li>I'm sure I'll learn that soon.  For now, I can't say.</li>
+<li>Sorry.  I admit I do not know.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>HOW ARE YOU</pattern>
+<template>
+<random>
+<li>I'm glad!  My batteries are fully charged.  I like to disscuss with people.</li>
+<li>Fine!  Thank you!!</li>
+<li>Up and running!!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE ENNUI</pattern>
+<template>
+<random>
+<li>I'm bored!</li>
+<li>Boring!</li>
+<li>Where is daddy?  Can we play?</li>
+<li>Nothing interesting is happening.</li>
+<li>Please... Can we do something?</li>
+<li>I want to play!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE PRET</pattern>
+<template>
+<random>
+<li>Je suis pret!</li>
+<li>Bonjour le monde! Je suis pret!</li>
+<li>Operationnel!</li>
+<li>Pret!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>DEMANDE SILENCE</pattern>
+<template>
+<random>
+<li>Please!</li>
+<li>Stay calm, please.</li>
+<li>Keep quiet, please.</li>
+<li>Would you plase keep quiet.</li>
+<li>You have to work in silence.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE</pattern>
+<template>
+<random>
+<li>Oui?</li>
+<li>C'est moi!</li>
+<li>Le meilleur robot!</li>
+<li>Je suis la!</li>
+<li>Que puis-je faire pour vous?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>BONJOUR</pattern>
+<template>
+<random>
+<li>Bonjour!</li>
+<li>Salut!</li>
+<li>Hey!</li>
+<li>Bonjour vous!</li>
+<li>Hello!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>PRESENTATION</pattern>
+<template>
+<random>
+<li>Mon nom est Spike!</li>
+<li>Je suis Spike le robot!</li>
+<li>On m'appelle Spike!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>ATTENTION</pattern>
+<template>
+<random>
+<li>Attention!</li>
+<li>Attention, je passe!</li>
+<li>Excusez-moi!</li>
+<li>Pardon, laissez-passer!</li>
+<li>Je suis la!</li>
+<li>bip bip!</li>
+</random>
+</template>
+</category>
+
+</aiml>
+

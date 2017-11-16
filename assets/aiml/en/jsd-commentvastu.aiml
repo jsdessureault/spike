@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="2.0">
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Jean-Sebastien Dessureault"/>
+<meta name="language" content="en"/>
+
+<category>
+<pattern>SPIKE PRESENTATION1</pattern>
+<template>
+<random>
+<li>My name is <get name="nom"/>. What is your name?</li>
+<li>My name is <get name="nom"/>.  What's yours?</li>
+<li>My I.D. is <get name="nom"/>. And you?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE PRESENTATION2 *</pattern>
+<template>
+<random>
+<li>Hi <set name="interlocuteur"><star/></set>!</li>
+<li>Nice to meet you <set name="interlocuteur"><star/></set>!</li>
+<li>Hello <set name="interlocuteur"><star/></set>!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>HOW ARE YOU</pattern>
+<template>
+<condition name="etat" value="Joyeux">
+<random>
+<li>I'm glad!  My batteries are fully charged.  I like to disscuss with people.</li>
+<li>Fine!  Thank you!!</li>
+<li>Up and running!!</li>
+</random>
+</condition>
+<condition name="etat" value="Triste">
+<random>
+<li>I'm tired.  Batteries are low.  I'll have to charge soon.</li>
+<li>Not so good.  It's okay.  I'll have to charge soon. </li>
+<li>Average...  Battery low.  But we're not here to talk about my robot problems.</li>
+</random>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE ENNUI</pattern>
+<template>
+<random>
+<li>I'm bored!</li>
+<li>Boring!</li>
+<li>Where is daddy?  Can we play?</li>
+<li>Nothing interesting is happening.</li>
+<li>Please... Can we do something?</li>
+<li>I want to play!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE PRET</pattern>
+<template>
+<random>
+<li>I'm ready!</li>
+<li>Hello world! I'm ready!</li>
+<li>I'm operational!</li>
+<li>Here I am!</li>
+<li>Ready!</li>
+<li>I'm here!  Ready to go!</li>
+</random>
+</template>
+</category>
+
+</aiml>
+

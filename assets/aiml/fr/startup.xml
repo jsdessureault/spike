@@ -1,0 +1,24 @@
+<aiml version="1.0">
+
+<!-- This category works with the Standard AIML Set -->
+<category>
+<pattern>LOAD AIML FRENCH</pattern>
+<template>
+
+<!-- Load standard AIML set -->
+<learn>/home/ubuntu/catkin_ws/src/spike/src/spike/aiml/fr/jsd-env-var.aiml</learn>
+<learn>/home/ubuntu/catkin_ws/src/spike/src/spike/aiml/fr/jsd-cegep.aiml</learn>
+<learn>/home/ubuntu/catkin_ws/src/spike/src/spike/aiml/fr/jsd-commentvastu.aiml</learn>
+<learn>/home/ubuntu/catkin_ws/src/spike/src/spike/aiml/fr/jsd-interets.aiml</learn>
+<learn>/home/ubuntu/catkin_ws/src/spike/src/spike/aiml/fr/jsd-nesaitpas.aiml</learn>
+</template>
+</category>
+
+<category>
+<pattern>TEST</pattern>
+<template>
+OK JSD.
+</template>
+</category>
+
+</aiml>

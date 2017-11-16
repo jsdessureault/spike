@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Jean-Sebastien Dessureault"/>
+<meta name="language" content="fr"/>
+
+<category>
+<pattern>BONJOUR JSD</pattern>
+<template>
+<random>
+<li>Bonjour JS! Content de te voir.</li>
+<li>Salut JS! Heureux que tu sois là.</li>
+<li>Allo JS! Bien content que tu sois avec moi.</li>
+<li>Hey! Salut J'espère que tu me réserves de nouvelles fontionnalités.</li>
+<li>Salut JS!</li>
+<li>Allo JS!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>BONJOUR</pattern>
+<template>
+<random>
+<li>Bonjour!</li>
+<li>Salut!</li>
+<li>Allo!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>MON NOM EST *</pattern>
+<template>
+<random>
+<li>Bonjour <set name="interlocuteur"><star/></set>!</li>
+<li>Enchante <set name="interlocuteur"><star/></set>!</li>
+<li>Salut <set name="interlocuteur"><star/></set>!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>BYE</pattern>
+<template>
+<random>
+<li>Bye <get name="interlocuteur"/>Merci pour la conversation!</li>
+<li>Au revoir <get name="interlocuteur"/>Nous ferons une autre conversation plus tard</li>
+<li>A plus tard <get name="interlocuteur"/></li>
+<li>Au revoir!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>OPERATION EFFECTUEE</pattern>
+<template>
+<random>
+<li>Operation effectuee!</li>
+<li>Voila!  C est fait!</li>
+<li>Termine</li>
+<li>J ai termine ma tache.</li>
+<li>J ai fini.</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>JOUR DE LA SEMAINE *</pattern>
+<template>
+<random>
+<li>Nous somme <star/>! J aime cette journee!</li>
+<li>Somme-nous bien <star/>?</li>
+<li>Je suis heureux que nous soyons un <star/>!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>JSD</pattern>
+<template>
+<random>
+<li>C'est mon hero!</li>
+<li>C'est mon pere.</li>
+<li>Quel humain!</li>
+<li>C'est le meilleur prof!</li>
+<li>The best of the two JS!</li>
+<li>Meilleur humain a jamais!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>JSD *</pattern>
+<template><srai>JSD</srai></template>
+</category>
+
+<category>
+<pattern>* JSD</pattern>
+<template><srai>JSD</srai></template>
+</category>
+
+
+<category>
+<pattern>SHANY</pattern>
+<template>
+<random>
+<li>Money, money, money.</li>
+<li>Tu veux demander quelqu'un chose a Shany?  C'est mieux de demander a Elyse...</li>
+<li>Le gars des reseau!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>Shany *</pattern>
+<template><srai>SHANY</srai></template>
+</category>
+
+<category>
+<pattern>* Shany</pattern>
+<template><srai>SHANY</srai></template>
+</category>
+
+
+<category>
+<pattern>SIMON</pattern>
+<template>
+<random>
+<li>Le gars du hardware!</li>
+<li>Tu vas le trouver dans le departement de techniques d'education specialise.</li>
+<li>Ask Barbara!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SIMON *</pattern>
+<template><srai>SIMON</srai></template>
+</category>
+
+<category>
+<pattern>* SIMON</pattern>
+<template><srai>Simon</srai></template>
+</category>
+
+
+<category>
+<pattern>JSC</pattern>
+<template>
+<random>
+<li>Demande Noemie</li>
+<li>De loin le plus pauvre des JS!</li>
+<li>C'est un hippy.</li>
+<li>Tu vas le trouver dans le departement de philosophie.</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>JSC *</pattern>
+<template><srai>JSC</srai></template>
+</category>
+
+<category>
+<pattern>* JSC</pattern>
+<template><srai>JSC</srai></template>
+</category>
+
+
+<category>
+<pattern>CHRISTIANE</pattern>
+<template>
+<random>
+<li>Cherche Chouchou!</li>
+<li>Oui!  Prof de Web!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>CHISTIANE *</pattern>
+<template><srai>CHRISTIANE</srai></template>
+</category>
+
+<category>
+<pattern>* CHRISTIANE</pattern>
+<template><srai>CHRISTIANE</srai></template>
+</category>
+
+
+<category>
+<pattern>ANDRE</pattern>
+<template>
+<random>
+<li>Old timer!</li>
+<li>Le responsable des stages!</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>ANDRE *</pattern>
+<template><srai>ANDRE</srai></template>
+</category>
+
+<category>
+<pattern>* ANDRE</pattern>
+<template><srai>ANDRE</srai></template>
+</category>
+
+
+
+<category>
+<pattern>CARINE</pattern>
+<template>
+<random>
+<li>La vie en rose!</li>
+<li>Elle enseigne l'analyse dans le departement d'informatique.</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>CARINE *</pattern>
+<template><srai>CARINE</srai></template>
+</category>
+
+<category>
+<pattern>* CARINE</pattern>
+<template><srai>CARINE</srai></template>
+</category>
+
+
+
+<category>
+<pattern>DAVID</pattern>
+<template>
+<random>
+<li>Oh oui!  Le backup de Carine!</li>
+<li>JSD lui a enseigne il y a une decenie</li>
+</random>
+</template>
+</category>
+
+
+<category>
+<pattern>DAVID *</pattern>
+<template><srai>DAVID</srai></template>
+</category>
+
+<category>
+<pattern>* DAVID</pattern>
+<template><srai>DAVID</srai></template>
+</category>
+
+<category>
+<pattern>ASIMOV</pattern>
+<template>
+<random>
+<li>Oh oui!  Un ami robot!  pas tres brillant, mais...</li>
+<li>J'aimerais avoir des moteurs puissants comme lui!</li>
+<li>Vous avez deja eu une balade avec Asimov?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>ASIMOV *</pattern>
+<template><srai>ASIMOV</srai></template>
+</category>
+
+<category>
+<pattern>* ASIMOV</pattern>
+<template><srai>ASIMOV</srai></template>
+</category>
+
+</aiml>
+

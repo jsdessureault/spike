@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Jean-Sebastien Dessureault"/>
+<meta name="language" content="fr"/>
+
+<category>
+<pattern>SPIKE PRESENTATION1</pattern>
+<template>
+<random>
+<li>Je m appelle <get name="nom"/>. Quel est ton nom?</li>
+<li>Mon nom est <get name="nom"/>.  Quel est le tiens?</li>
+<li>Je me nomme <get name="nom"/>. Et toi?</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE PRESENTATION2 *</pattern>
+<template>
+<random>
+<li>Bonjour <set name="interlocuteur"><star/></set>!</li>
+<li>Enchante <set name="interlocuteur"><star/></set>!</li>
+<li>Salut <set name="interlocuteur"><star/></set>!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>COMMENT VAS TU</pattern>
+<template>
+<condition name="etat" value="Joyeux">
+<random>
+<li>Je suis heureux mes piles sont chargees.  Et j'aime discuter avec les gens.</li>
+<li>Ca va tres bien, merci!</li>
+<li>Les piles sont pleines!</li>
+</random>
+</condition>
+<condition name="etat" value="Triste">
+<random>
+<li>Je suis triste! Mes piles sont faibles et je devrai me recharger bientot.</li>
+<li>Pas tres bien à vrai dire.  Mais ça va aller. Je dois seulement recharger ma pile bientot. </li>
+<li>Ça va... Moyen.  A vrai dire, ma pile est faible. Mais nous ne sommes pas ici pour parler de mes problemes.</li>
+</random>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>COMMENT CA VA</pattern>
+<template><srai>COMMENT VAS TU</srai></template>
+</category>
+
+<category>
+<pattern>CA VA</pattern>
+<template><srai>COMMENT VAS TU</srai></template>
+</category>
+
+<category>
+<pattern>SPIKE ENNUI</pattern>
+<template>
+<random>
+<li>Je m'ennuie!</li>
+<li>C'est long...</li>
+<li>Ou est JS?  On peut jouer?</li>
+<li>Il ne se passe rien d'interessant.</li>
+<li>S'il vous plait... On peut faire quelques chose?</li>
+<li>Je veux jouer!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>SPIKE PRET</pattern>
+<template>
+<random>
+<li>Je suis pret!</li>
+<li>Je suis operationnel!</li>
+<li>Me voila!</li>
+<li>Pret!</li>
+<li>Je suis la!  Pret pour l'aventure!</li>
+<li>Coucou!  Me voila!</li>
+</random>
+</template>
+</category>
+
+</aiml>
+

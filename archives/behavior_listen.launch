@@ -1,0 +1,16 @@
+<launch>
+  
+  <node name="Listen" pkg="spike" type="behavior_listen.py" output="screen" respawn="false" required="true">
+    <param name="verbose" type="bool" value="True"/>		<!-- Will display process if True -->	
+    <param name="graph" type="bool" value="False"/>		<!-- Display or not the graphics after first iteration  -->
+    <param name="mode" type="int" value="1"/>     		<!-- 0: ROSBAG  1:ROS  2:TEST -->   
+    <param name="format" type="int" value="8"/>	     		<!-- sound format paInt8=16 paInt16=8 paInt24=4 paInt32=2 -->   
+    <param name="channels" type="int" value="1"/>     		<!-- channel 1:Mono  2:Stereo -->   
+    <param name="rate" type="int" value="44100"/>     		<!-- sound rate -->   
+    <param name="chunk" type="int" value="2000"/>     		<!-- size of the chunk of information to read (1000) -->   
+    <param name="frames" type="int" value="1000"/>     		<!-- Number of frame per cycle (5000) -->   
+    <param name="sampling" type="int" value="1"/>     		<!-- sampling of the reading -->   
+    <param name="rospy_rate" type="int" value="50"/>     	<!-- speed of the main loop of reading (500) -->   
+
+  </node>
+</launch>

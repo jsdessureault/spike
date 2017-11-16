@@ -1,0 +1,21 @@
+<launch>
+  <node name="SNN" pkg="spike" type="SNN.py" output="screen" respawn="false" required="true">
+    <param name="path" value="/home/ubuntu/catkin_ws/src/spike/src/spike/SNN/learned/"/>     <!-- path where the trained SNN is saved -->   
+    <param name="SNNname" value="Son528Hz"/>			    <!-- Name of the SNN -->
+    <param name="verbose" type="bool" value="True"/>		<!-- Will display process if True -->	
+    <param name="graph" type="bool" value="True"/>		    <!-- Display or not the graphics after first iteration  -->
+    <param name="STDP" type="bool" value="True"/>		    <!-- Use or not the STDP: Spike Timing Dependant Plasticity   -->    
+    <param name="mode" type="int" value="1"/>			    <!-- 0: Learning mode  1: run mode -->
+    <param name="nb_learn" type="int" value="5"/>			<!-- nb data to learn (if mode==0) -->    
+    <param name="sensory_neurons" type="int" value="5"/>	<!-- Number of sensory neurons -->
+    <param name="motor_neurons" type="int" value="1"/>		<!-- Number of motor neurons -->
+    <param name="inter_neurons" type="int" value="3"/>	    <!-- Number of inter neurons -->
+    <param name="inter_layers" type="int" value="1"/>	    <!-- Number of layers of inter neurons -->
+    <param name="synapse_weight" value="0.01"/>	            <!-- Synapse weight value -->
+    <param name="tau" type="int" value="10"/>			    <!-- Tau constant -->
+    <param name="threshold" value="v>0.8"/>			        <!-- The spike threshold  -->
+    <param name="reset" value="v = 0"/>			            <!-- The reset value after a spike  -->
+    <param name="refractory" type="int" value="5"/>	    <!-- The refractory time -->
+    <param name="simulation_lenght" type="int" value="100"/><!-- The simlation lenght -->  
+  </node>
+</launch>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<!-- Free software (c) 2001 ALICE AI Foundation -->
+<!-- This program is open source code released under -->
+<!-- the terms of the GNU General Public License -->
+<!-- as published by the Free Software Foundation. -->
+
+<meta name="author" content="Jean-Sebastien Dessureault"/>
+<meta name="language" content="fr"/>
+
+<category>
+<pattern>SPIKE NE SAIT PAS</pattern>
+<template>
+<random>
+<li>Mon intelligence artificielle n'a pas apprit cela pour le moment.</li>
+<li>Je regrette, je ne sais pas.</li>
+<li>Je suis désolé, je ne connais pas cela.</li>
+<li>Je dois reconnaitre que mon intelligence artificielle est limitée ici.  Posez-moi la question dans quelques mois.</li>
+<li>Je n'en ai pas la moindre idée.</li>
+<li>Je ne sais pas encore, mais je saurai bientôt.</li>
+<li>Je ne sais pas pour le moment. Mais attention, j'apprends vite!</li>
+<li>Je suis certain que j'apprendrai cela bientôt.  Mais pour le moment, je ne peux pas vous répondre.</li>
+<li>Je regrette, je dois reconnaitre que je ne sais pas cela.</li>
+</random>
+</template>
+</category>
+
+
+
+</aiml>
+

@@ -1,0 +1,38 @@
+
+Git: 
+https://github.com/jsdessureault/spike_robot.git
+
+
+Au debut:
+git clone ...
+
+
+Dans le dossier qui contient le .git
+
+	user: jsdessureault
+	password: hPl26pBS
+
+	- pour configuer (1ere fois)
+
+		$ git config --global user.email "sdessureault@videotron.ca"
+		$ git config --global user.name "Jean-Sebastien Dessureault"
+
+	- Pour voir le statut
+
+		$ git status
+
+	- Pour ajouter des fichiers
+		$ sudo git add --all
+
+
+	- Pour faire un update (les fichiers ont ete modifies ailleurs)
+
+		$ git pull origin master
+
+	- Pour faire le check out
+
+		$ git commit -a
+		$ git push origin master
+
+
+archive/pocketsphinx/fr.lm.dmp
