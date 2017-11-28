@@ -1,12 +1,13 @@
-<aiml version="2.0">
+<aiml version="1.0">
 
 <!-- This category works with the Standard AIML Set -->
-<category>
-<pattern>LOAD AIML ENGLISH</pattern>
-<template>
 
 <!-- Load standard AIML set -->
-<learn>/home/pi/ros_catkin_ws/src/spike/assets/aiml/encommandes.aiml</learn>
+<category>
+<pattern>LOAD AIML</pattern>
+<template>
+<learn>/home/pi/ros_catkin_ws/src/spike/assets/aiml/en/commandes.aiml</learn>
+AIML LOADED!
 </template>
 </category>
 

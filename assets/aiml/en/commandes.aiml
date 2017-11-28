@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<aiml version="2.0">
+<aiml version="1.0">
 
 <!-- Free software (c) 2001 ALICE AI Foundation -->
 <!-- This program is open source code released under -->
@@ -9,6 +9,66 @@
 
 <meta name="author" content="Jean-Sebastien Dessureault"/>
 <meta name="language" content="en"/>
+
+<category>
+<pattern>FORWARD</pattern>
+<template>
+<random>
+<li>Forward. Ok!</li>
+<li>Forward. Go!</li>
+<li>Forward. Here we go!</li>
+<li>Forward. Go for it!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>BACKWARD</pattern>
+<template>
+<random>
+<li>Backward. Ok!</li>
+<li>Backward. Go!</li>
+<li>Backward. Bip bip bip bip!</li>
+<li>Backward. Watch out!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>LEFT</pattern>
+<template>
+<random>
+<li>Left. Ok!</li>
+<li>Left. Fine!</li>
+<li>Left. Here we go!</li>
+<li>Left. Yes!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>RIGHT</pattern>
+<template>
+<random>
+<li>Right. Ok!</li>
+<li>Right. Fine!</li>
+<li>Right. Ok, ok!</li>
+<li>Right. Yes!</li>
+</random>
+</template>
+</category>
+
+<category>
+<pattern>STOP</pattern>
+<template>
+<random>
+<li>Stop. Ok!</li>
+<li>Stopping!</li>
+<li>Stop now!</li>
+<li>Stop!</li>
+</random>
+</template>
+</category>
 
 <category>
 <pattern>TELL ME A JOKE</pattern>
@@ -23,7 +83,7 @@
 </category>
 
 <category>
-<pattern>SPIKE NE SAIT PAS</pattern>
+<pattern>SPIKE DONT KNOW</pattern>
 <template>
 <random>
 <li>My artificial intelligence doesn't know about it yet.</li>
@@ -51,7 +111,7 @@
 </category>
 
 <category>
-<pattern>SPIKE ENNUI</pattern>
+<pattern>SPIKE BORED</pattern>
 <template>
 <random>
 <li>I'm bored!</li>
@@ -65,19 +125,19 @@
 </category>
 
 <category>
-<pattern>SPIKE PRET</pattern>
+<pattern>SPIKE READY</pattern>
 <template>
 <random>
-<li>Je suis pret!</li>
-<li>Bonjour le monde! Je suis pret!</li>
-<li>Operationnel!</li>
-<li>Pret!</li>
+<li>I am ready!</li>
+<li>Hello World!</li>
+<li>Up and running!</li>
+<li>Ready!</li>
 </random>
 </template>
 </category>
 
 <category>
-<pattern>DEMANDE SILENCE</pattern>
+<pattern>ASK SILENCE</pattern>
 <template>
 <random>
 <li>Please!</li>
@@ -93,24 +153,23 @@
 <pattern>SPIKE</pattern>
 <template>
 <random>
-<li>Oui?</li>
-<li>C'est moi!</li>
-<li>Le meilleur robot!</li>
-<li>Je suis la!</li>
-<li>Que puis-je faire pour vous?</li>
+<li>Yes?</li>
+<li>It's me!</li>
+<li>The best robot!</li>
+<li>I am here!</li>
+<li>What can I do for you?</li>
 </random>
 </template>
 </category>
 
 <category>
-<pattern>BONJOUR</pattern>
+<pattern>HELLO</pattern>
 <template>
 <random>
-<li>Bonjour!</li>
-<li>Salut!</li>
-<li>Hey!</li>
-<li>Bonjour vous!</li>
+<li>Hi!</li>
 <li>Hello!</li>
+<li>Hey!</li>
+<li>Good morning!</li>
 </random>
 </template>
 </category>
@@ -119,9 +178,9 @@
 <pattern>PRESENTATION</pattern>
 <template>
 <random>
-<li>Mon nom est Spike!</li>
-<li>Je suis Spike le robot!</li>
-<li>On m'appelle Spike!</li>
+<li>My name is Spike!</li>
+<li>I am Spike, the robot!</li>
+<li>They call me Spike!</li>
 </random>
 </template>
 </category>
@@ -131,11 +190,12 @@
 <template>
 <random>
 <li>Attention!</li>
-<li>Attention, je passe!</li>
-<li>Excusez-moi!</li>
-<li>Pardon, laissez-passer!</li>
-<li>Je suis la!</li>
+<li>Be carefull, I am here!</li>
+<li>Excuse me!</li>
+<li>I beg you pardon, let me get through!</li>
+<li>Watch out!</li>
 <li>bip bip!</li>
+<li>Robot here!</li>
 </random>
 </template>
 </category>
