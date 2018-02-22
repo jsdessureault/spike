@@ -1,1 +1,0 @@
-roslaunch spike behavior_joytest_SNN.launch
