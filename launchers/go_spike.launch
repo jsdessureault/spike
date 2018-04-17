@@ -1,0 +1,6 @@
+<launch>
+  <node name="behavior_speak" pkg="spike" type="behavior_speak.py" output="screen"></node>
+  <node name="behavior_chatbot" pkg="spike" type="behavior_chatbot.py" output="screen"></node>
+  <node name="behavior_speech_recog" pkg="spike" type="behavior_speech_recog.py" output="screen"></node>
+  <node name="behavior_mood" pkg="spike" type="behavior_mood.py" output="screen"></node>
+</launch>

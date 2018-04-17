@@ -1,5 +1,13 @@
 <launch>
   
+  <node name="behavior_speak" pkg="spike" type="behavior_speak.py" output="screen"></node>
+  <node name="behavior_chatbot" pkg="spike" type="behavior_chatbot.py" output="screen"></node>
+  <node name="behavior_mood" pkg="spike" type="behavior_mood.py" output="screen"></node>
+  <node name="behavior_navigation" pkg="spike" type="behavior_navigation.py" output="screen"></node>
+  <node name="behavior_laser2snn" pkg="spike" type="behavior_laser2snn.py" output="screen"></node>
+  <node name="behavior_speech2snn" pkg="spike" type="behavior_speech2snn.py" output="screen"></node>
+
+
   <node name="SNN" pkg="ros_snn" type="SNN.py" output="screen" respawn="false" required="true">
     <param name="path" value="/home/pi/ros_catkin_ws/src/spike/assets/snn/"/>     <!-- path where the trained SNN is saved -->   
     <param name="SNNname" value="spike"/> 			    <!-- Name of the SNN -->
@@ -11,7 +19,8 @@
   <node name="input_converter" pkg="ros_snn" type="input_converter.py" output="screen" respawn="false" required="true">
     <param name="SNNname" value="spike"/> 			        <!-- Name of the SNN -->    
     <param name="verbose" type="bool" value="True"/>		    <!-- Will display process if True -->
-    <param name="topics_to_convert" type="int" value="6"/>		    <!-- Number of sensory neurons -->    
+    <param name="topics_to_convert" type="int" value="6"/>		    <!-- Number of sensory neurons -->
+    
     <param name="input_topic_1" value="/command_snn"/>			        <!-- Topic containing the value of the input neuron -->  
     <param name="topic_type_1" value="Float32MultiArray"/>        <!-- Topic containing the type of the input neuron topic 1-->  
     <param name="input_field_1" value=".data[0]"/>		<!-- Field of the topic containing the value of the input neuron -->      
@@ -36,17 +45,11 @@
     <param name="input_min_4" value="0.0"/>		<!-- Minimum value of the MinMax function -->      
     <param name="input_max_4" value="1.0"/>		<!-- Minimum value of the MinMax function -->  
 
-    <param name="input_topic_5" value="/command_snn"/>			        <!-- Topic containing the value of the input neuron -->  
-    <param name="topic_type_5" value="Float32MultiArray"/>        <!-- Topic containing the type of the input neuron topic 1-->  
-    <param name="input_field_5" value=".data[4]"/>		<!-- Field of the topic containing the value of the input neuron -->      
+    <param name="input_topic_5" value="/nearest_value_scan"/>			        <!-- Topic containing the value of the input neuron -->  
+    <param name="topic_type_5" value="Float32"/>        <!-- Topic containing the type of the input neuron topic 1-->  
+    <param name="input_field_5" value=".data"/>			<!-- Field of the topic containing the value of the input neuron -->      
     <param name="input_min_5" value="0.0"/>		<!-- Minimum value of the MinMax function -->      
     <param name="input_max_5" value="1.0"/>		<!-- Minimum value of the MinMax function -->  
-
-    <param name="input_topic_6" value="/nearest_value_scan"/>			        <!-- Topic containing the value of the input neuron -->  
-    <param name="topic_type_6" value="Float32"/>        <!-- Topic containing the type of the input neuron topic 1-->  
-    <param name="input_field_6" value=".data"/>			<!-- Field of the topic containing the value of the input neuron -->      
-    <param name="input_min_6" value="0.0"/>		<!-- Minimum value of the MinMax function -->      
-    <param name="input_max_6" value="1.0"/>		<!-- Minimum value of the MinMax function -->  
   </node>
   <!--   <remap from="/joy" to="/topic_in_SNN_joytest"> -->  
 </launch>

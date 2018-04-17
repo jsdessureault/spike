@@ -6,6 +6,7 @@ import matplotlib as mpl
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import os
 
 rospy.init_node('node_mood', anonymous=True)
 rospy.loginfo("behavior_mood")
@@ -17,13 +18,13 @@ times = []
 iTime = 0
 
 # Plot
-# Small scree Spike: 600 X 480
+# Small scree Spike: 1600 X 800
 temps_max = 600
 img_neutre = mpimg.imread("/home/pi/ros_catkin_ws/src/spike/assets/images/humeurs/humeurNeutre.png")
 mpl.rcParams['toolbar'] = 'None'
 figsize = mpl.rcParams['figure.figsize']
-figsize[0] = 8
-figsize[1] = 4.5
+figsize[0] = 18 #8
+figsize[1] = 12 #4.5
 mpl.rcParams['figure.figsize'] = figsize
 
 figure, ax = plt.subplots(2, sharex=True)
@@ -38,7 +39,7 @@ ax[1].axis('off')
 ax[1].imshow(img_neutre)
 
 def update_line(data):
-    print "update: " + str(len(volts)) + " " + str(len(times))
+    #print "update: " + str(len(volts)) + " " + str(len(times))
     line.set_ydata(volts)
     line.set_xdata(times) 
     return line, 
@@ -61,7 +62,7 @@ def callbackMood(data):
 def callbackNeurons(data):
     global iTime
     #print "Callback neurons " + str(iTime)
-    if iTime >= 600:
+    if iTime >= temps_max:
         del times[:]
         del volts[:]
         iTime = 0

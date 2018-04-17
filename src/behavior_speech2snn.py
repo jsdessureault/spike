@@ -18,7 +18,6 @@ def callbackInput(data):
         rospy.loginfo(rospy.get_caller_id() + " Message received: %s", command)
 
     forward = 0.0
-    backward = 0.0
     left = 0.0
     right = 0.0
     stop = 0.0
@@ -43,10 +42,9 @@ def callbackInput(data):
         rospy.loginfo("Valid command detected!")
         cmd = []
         cmd.append(forward)
-        cmd.append(backward)
+        cmd.append(stop)
         cmd.append(left)
         cmd.append(right)
-        cmd.append(stop)
         f32ma = Float32MultiArray()
         f32ma.data = cmd
         pub.publish(f32ma)

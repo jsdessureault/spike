@@ -15,17 +15,24 @@ pub = rospy.Publisher('/nearest_value_scan', Float32, queue_size = 10)
 def callbackInput(data):
     ranges = data.ranges
     # Get to smallest value of the array to find the nearest object.
+    # We only take the value of the 1/3 most center of the laser detection. 
+    lenght = len(ranges)
+    third = int(lenght / 3)
     smallest = 99.9
-    i = 0
-    while (i < len(ranges)):
+    i = third
+    while (i < (third * 2)):
         if ranges[i] < smallest:
             smallest = ranges[i]
         i += 1
 
+    if smallest == 99.9:
+        smallest = 0.0
     nearest = smallest / data.range_max
+    voltage = 1.0 - nearest
     if verbose:
-        rospy.loginfo(rospy.get_caller_id() + " Smallest distance: " + str(smallest) + " Normalized: " + str(nearest))
-    pub.publish(nearest)
+        rospy.loginfo("Smallest dist.: " + str(smallest) + "range_max: " + str(data.range_max) + " Norm.: " + str(nearest) + " Volt " + str(voltage))
+
+    pub.publish(voltage)
 
  
 rospy.Subscriber("/scan", LaserScan, callbackInput)
