@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SNN 
+	equation="" 
+	name="spike" 
+	realtime_limit="0.75"
+	synapse_delay="0.1" 
+	input_drive_current="0.1"
+	tau="10" 
+	threshold="v>=0.9" 
+	reset="v=0" 
+	refractory="5" 
+	sim_lenght="5">
+
+	<layer type="sensory" name="sensory">
+		<neuron id="0">Instr.Forward</neuron>
+		<neuron id="1">Instr.Stop</neuron>
+		<neuron id="2">Instr.Left</neuron>
+		<neuron id="3">Instr.Right</neuron>
+		<neuron id="4">Laser</neuron>
+	</layer>
+	<layer type="inter" name="inter">
+		<neuron id="0"  synapse="0" layer="sensory" weight="1.0">Forward</neuron>
+		<neuron id="1"  synapse="1" layer="sensory" weight="1.0">Stop</neuron>
+		<neuron id="2"  synapse="2" layer="sensory" weight="1.0">Left</neuron>
+		<neuron id="3"  synapse="3" layer="sensory" weight="1.0">Right</neuron>
+		<neuron id="4"  synapse="4" layer="sensory" weight="1.0">Laser detects obstacle</neuron>
+	</layer>
+	<layer type="motor" name="motor">
+		<neuron id="0"  synapse="0, 1" layer="inter" weight="1.0, -1.0">Forward</neuron>
+		<neuron id="1"  synapse="1" layer="inter" weight="1.0">Stop</neuron>
+		<neuron id="2"  synapse="2, 1" layer="inter" weight="1.0, -1.0">Left</neuron>
+		<neuron id="3"  synapse="3, 1" layer="inter" weight="1.0, -1.0">Right</neuron>
+		<neuron id="4"  synapse="4" layer="inter" weight="1.0">Laser detects obstacle</neuron>
+	</layer>
+
+</SNN>

@@ -1,7 +1,7 @@
 <launch>
   
   <node name="SNN" pkg="ros_snn" type="SNN.py" output="screen" respawn="false" required="true">
-    <param name="path" value="/home/pi/ros_catkin_ws/src/spike/assets/snn/"/>     <!-- path where the trained SNN is saved -->   
+    <param name="path" value="/home/pi/ros_catkin_ws/src/spike/assets/snn/"/>     <!-- path where the architecture is stored in a xml file -->   
     <param name="SNNname" value="spike"/> 			    <!-- Name of the SNN -->
     <param name="xml" value="snn_spike.xml"/> 			    <!-- Name of the xml file -->
     <param name="verbose" type="bool" value="True"/>		<!-- Will display process if True -->
@@ -9,6 +9,7 @@
   
   <!-- Remapping topics for sensory (input) neurons.  Quantity must match "sensory_neurons" parameter -->
   <node name="input_converter" pkg="ros_snn" type="input_converter.py" output="screen" respawn="false" required="true">
+    <param name="path" value="/home/pi/ros_catkin_ws/src/spike/assets/snn/"/>     <!-- path where we can find the csv files -->  
     <param name="SNNname" value="spike"/> 			        <!-- Name of the SNN -->    
     <param name="verbose" type="bool" value="True"/>		    <!-- Will display process if True -->
     <param name="topics_to_convert" type="int" value="5"/>		    <!-- Number of sensory neurons -->    
@@ -42,6 +43,7 @@
     <param name="input_field_5" value=".data"/>			<!-- Field of the topic containing the value of the input neuron -->      
     <param name="input_min_5" value="0.0"/>		<!-- Minimum value of the MinMax function -->      
     <param name="input_max_5" value="1.0"/>		<!-- Minimum value of the MinMax function -->   
+
 
   </node>
   <!--   <remap from="/joy" to="/topic_in_SNN_joytest"> -->  
